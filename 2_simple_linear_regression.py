@@ -36,7 +36,7 @@ regressor.fit(X_train, y_train)
 #Modelling the Prediction Using Training Set
 train_pred = regressor.predict(X_train)
 
-#Modelling the Prediction Using Testing Set
+#Validating Model on Testing Set
 test_pred  = regressor.predict(X_test)
 
 #Visualising the Model based on Training Set
