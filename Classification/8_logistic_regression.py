@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #Importing Dataset and Segregating Independent & Dependent Variables
-dataset = pd.read_csv("Data/8_Social_Network_Ads.csv")
+dataset = pd.read_csv("../Data/8_Social_Network_Ads.csv")
 X = dataset.iloc[:, [2,3]].values       #Includes only the age & salary column
 y = dataset.iloc[:, 4].values
 print("dataset")

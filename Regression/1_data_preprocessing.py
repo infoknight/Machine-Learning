@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #Import Dataset & Segregate Independent and Dependent Variables
-dataset = pd.read_csv("Data/1_Data.csv")
+dataset = pd.read_csv("../Data/1_Data.csv")
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 

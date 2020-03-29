@@ -14,12 +14,14 @@ y_India = dataset.iloc[:, -1].values   #India
 #Taking Care of Columns with Missing Data
 #Not Applicable
 
+'''
 #Encoding Categorical Data (Only LabelEncoding is adequate)
 from sklearn.preprocessing import LabelEncoder
 from sklearn.compose import ColumnTransformer
 labelencoder_Date = LabelEncoder()
 labelencoder_Date = labelencoder_Date.fit(X[:, 0])
 X[:, 0] = labelencoder_Date.transform(X[:, 0])
+'''
 
 #X_poly = poly_reg.fit_transform(X)                  #Creating polynomial expression with required degrees
 #Splitting Dataset into Training & Testing data
@@ -36,7 +38,7 @@ ss_y = StandardScaler()
 #Fitting the Polynomial Linear Regression to the dataset
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-poly_reg = PolynomialFeatures(degree = 3)
+poly_reg = PolynomialFeatures(degree = 6)
 X_poly = poly_reg.fit_transform(X)                  #Creating polynomial expression with required degrees
 #X_poly_Italy = poly_reg.fit_transform(y_Italy)                  #Creating polynomial expression with required degrees
 #X_poly_India = poly_reg.fit_transform(y_India)                  #Creating polynomial expression with required degrees
@@ -57,14 +59,14 @@ fig, (ax1, ax2) = plt.subplots(2)
 #Italy
 ax1.scatter(X, y_Italy, color = "red")
 ax1.plot(X, pred_Italy, color = "blue")
-ax1.set_title("CoronaVirus : Cases in Italy")
-#ax1.set_xlabel("Days")
+ax1.set_title("CoronaVirus : New Cases in Italy")
+ax1.set_xlabel("Days Passed")
 ax1.set_ylabel("New Cases Detected")
 #India
 ax2.scatter(X, y_India, color = "red")
 ax2.plot(X, pred_India, color = "green")
-ax2.set_title("CoronaVirus : Cases in India")
-ax2.set_xlabel("Days")
+ax2.set_title("CoronaVirus : New Cases in India")
+ax2.set_xlabel("Days Passed")
 ax2.set_ylabel("New Cases Detected")
 plt.show()
 
