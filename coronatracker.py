@@ -60,7 +60,7 @@ fig, (ax1, ax2) = plt.subplots(2)
 ax1.scatter(X, y_Italy, color = "red")
 ax1.plot(X, pred_Italy, color = "blue")
 ax1.set_title("CoronaVirus : New Cases in Italy")
-ax1.set_xlabel("Days Passed")
+#ax1.set_xlabel("Days Passed")
 ax1.set_ylabel("New Cases Detected")
 #India
 ax2.scatter(X, y_India, color = "red")
