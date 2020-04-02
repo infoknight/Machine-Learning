@@ -38,7 +38,7 @@ ss_y = StandardScaler()
 #Fitting the Polynomial Linear Regression to the dataset
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-poly_reg = PolynomialFeatures(degree = 6)
+poly_reg = PolynomialFeatures(degree = 28)
 X_poly = poly_reg.fit_transform(X)                  #Creating polynomial expression with required degrees
 #X_poly_Italy = poly_reg.fit_transform(y_Italy)                  #Creating polynomial expression with required degrees
 #X_poly_India = poly_reg.fit_transform(y_India)                  #Creating polynomial expression with required degrees
